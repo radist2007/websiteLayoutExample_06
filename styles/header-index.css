@@ -1,0 +1,55 @@
+
+.header {
+    /* height: 55px; */
+    background-color: orange;
+}
+.header__logo {
+    display: inline-block;
+}
+.header .header__logo>a:hover {
+    text-decoration: none;
+}
+.header h1 {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+}
+.header h1 i {
+    font-size: 16px;
+    font-weight: 100;
+    color: rgb(88, 88, 88);
+    text-shadow: 0 0 10px #fff;
+}
+.header .header__description {
+    position: relative;
+    float: right;
+    margin-top: 2px;
+}
+.header .header__description i {
+    color: #fff;
+}
+#this, #ok {
+    position: absolute;
+    top: 16px;
+    left: -30px;
+    font-size: 18px;
+}
+#ok {
+    display: none;
+}
+.header .header__description:hover > #ok {
+    display: block;
+}
+.header .header__description:hover > #this {
+    display: none;
+}
+
+.header .header__description a {
+    color: #fff;
+    text-decoration: none;
+}
+.header .header__description a:hover {
+    color: #fff;
+    text-decoration: underline;
+}

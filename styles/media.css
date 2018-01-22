@@ -1,0 +1,48 @@
+
+@media screen and (max-width: 768px){
+    .main {
+        padding-top: 5%;
+    }
+}
+@media screen and (max-width: 530px){
+    .header .header__description {
+        display: none;
+    }
+    .header .header__nav {
+        display: none;
+    }
+    .main__wrap {
+        width: 80%;
+        text-align: center;
+        /* margin: 0 auto; */
+    }
+    .enigma {
+        /* text-align: center; */
+        /* display: block; */
+        margin: 0 auto;
+        width: 90%;
+    }
+    #input {
+        width: 80%;
+    }
+    #btn {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 320px){
+    .main {
+        padding-top: 20px;
+    }
+    .main__wrap {
+        width: 100%;
+    }
+    .main .myGuess .enigma {
+        margin-bottom: 10px;
+    }
+    #input {
+        width: 100%;
+    }
+    #btn {
+        width: 100%;
+    }
+}

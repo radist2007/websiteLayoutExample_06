@@ -1,0 +1,37 @@
+.myGuess .enigma {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.myGuess input {
+    font-size: 20px;
+    width: 50%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    margin-bottom: 20px;
+}
+#output {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+#btn {
+    min-width: 20%;
+    padding: 10px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    background-color: green;
+    transition: all .5s;
+}
+#btn:hover {
+    font-size: 18px;
+    background-color: rgb(0, 168, 0);
+}
+#btn:active {
+    background-color: orange;
+
+}

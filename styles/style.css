@@ -1,0 +1,45 @@
+@import 'header-index.css';
+@import 'header-games.css';
+@import 'footer.css';
+
+html {
+    height: 100%;
+}
+body {
+    position: relative;
+    /* padding-bottom: 6rem; */
+    min-height: 100%;
+}
+.main {
+    padding-top: 7%;
+    text-align: center;
+    color: gray;
+}
+.main h2 {
+    font-size: 30px;
+}
+.main__wrap {
+    width: 60%;
+    margin: 0 auto;
+}
+.main__wrap a {
+    font-size: 14px;
+    line-height: 40px;
+    transition: all .5s;
+}
+.main__wrap a:hover {
+    padding-top: -10px;
+    font-size: 30px;
+    line-height: 6px;
+    text-decoration: none;
+    transition: all .5s;
+}
+.main__block {
+    height: 100px;
+    padding-top: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
