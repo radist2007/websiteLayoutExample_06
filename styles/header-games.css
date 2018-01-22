@@ -18,3 +18,13 @@
     text-decoration: none;
     color: #fff;
 }
+.header .header__nav #ua {
+    /* margin-left: 10px; */
+}
+.header .header__nav a img {
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    /* margin: -16px 6px; */
+    padding-top: -10px;
+}

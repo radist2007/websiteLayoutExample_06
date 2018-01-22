@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="lib/font-awesome.css">
     <link rel="stylesheet" href="lib/normalize.css">
     <link rel="stylesheet" href="lib/bootstrap.css">
-    <link rel="stylesheet" href="styles/main-MyGuess.css">
+    <link rel="stylesheet" href="styles/main-YourGuess.css">
     <link rel="stylesheet" href="styles/media.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -17,22 +17,22 @@
      <header class="header">
          <div class="container">
              <div class="header__wrap row">
-                <div class="header__logo col-lg-3 col-md-5 col-sm-4">
+                <div class="header__logo col-lg-3 col-md-5 col-sm-5">
                     <a href="index.html">
                         <h1>JavaScript <span><i>Games</i></span></h1>
                     </a>
                 </div>
-                <nav class="header__nav col-lg-4 col-md-6 col-sm-7">
+                <nav class="header__nav col-lg-4 col-md-6 col-sm-6">
                     <ul>
-                        <li><a href="MyGuess.html">my guess</a></li>
-                        <li><a href="YourGuess.html">your guess</a></li>
+                        <li><a href="MyGuess.html">я вгадую</a></li>
+                        <li><a href="YourGuess.html">ти вгадуєш</a></li>
                         <li>
-                            <a id="ua" href="MyGuess_ua.html">
+                            <a id="ua" href="YourGuess_ua.html">
                                 <img src="icons/ukraine.png" alt="ukraine-flag">
                             </a>
                         </li>
                         <li>
-                            <a id="uk" href="MyGuess.html">
+                            <a id="uk" href="YourGuess.html">
                                 <img src="icons/unitedKingdom.ico" alt="uk-flag">
                             </a>
                         </li>
@@ -43,11 +43,10 @@
      </header>
      <main class="main">
          <div class="container">
-            <section class="myGuess">
-                <p class="enigma">i am thinking of a number between 0 and 99.</p>
-                <input id="input" type="number" placeholder="Enter your guess.." autofocus>
-                <p id="output">game state</p>
-                <button id="btn">guess</button>
+            <section class="yourGuess">
+                <p id="info" class="enigma">загадай <span>своє</span> число від 1 to 5</p>
+                <br>
+                <button id="btn">Готово</button>
             </section>
          </div>
      </main>
@@ -59,7 +58,7 @@
 
     <!-- scripts -->
     <script src="lib/jquery-3.2.1.min.js"></script>
-    <script src="js/myGuess.js"></script>
+    <script src="js/yourGuess_ua.js"></script>
     <!-- end scripts -->
 </body>
 </html>

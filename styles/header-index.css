@@ -25,6 +25,8 @@
     position: relative;
     float: right;
     margin-top: 2px;
+    /* background-color: aquamarine; */
+    display: flex;
 }
 .header .header__description i {
     color: #fff;
@@ -52,4 +54,13 @@
 .header .header__description a:hover {
     color: #fff;
     text-decoration: underline;
+}
+.header .header__description #ua {
+    margin-left: 10px;
+}
+.header .header__description a img {
+    height: 25px;
+    width: 30px;
+    cursor: pointer;
+    margin: 12px 6px;
 }

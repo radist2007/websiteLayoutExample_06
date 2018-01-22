@@ -11,7 +11,7 @@ body {
     min-height: 100%;
 }
 .main {
-    padding-top: 7%;
+    /* padding-top: 7%; */
     text-align: center;
     color: gray;
 }
