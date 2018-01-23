@@ -1,24 +1,85 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
 
+    var data = locals; // locals frmo data.js
     const stepStart = 0;
     var obj = {};
     var randomNumber;
     var secretNumber;
-    // var gameOver = false;
+    var languege = "ua";
+    var lang = 0;
 
+    var imgLang = document.querySelector('#imgLang');
     var info = document.querySelector('#info');
     var btn = document.querySelector('#btn');
+    var toYourGuess = document.querySelector('#toYourGuess');
+    var toMyGuess = document.querySelector('#toMyGuess');
+    var linkToBook = document.querySelector('#linkToBook')
+
+    imgLang.addEventListener('click', getLanguage, false);
 
 
     startPlay();
 
-    function randNumFun(){
+    function getLanguage() {
+        if (languege === "ua") {
+            languege = "uk";
+            lang = 1
+            document.querySelector('#imgLang').src = data.index.header.flagSrc[0];
+            toYourGuess.innerHTML = data.common.YourGuess[lang];
+            toMyGuess.innerHTML = data.common.MyGuess[lang];
+            linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+            chengeLanguage();
+        }else if (languege === "uk") {
+            languege = "ua";
+            lang = 0;
+            document.querySelector('#imgLang').src = data.index.header.flagSrc[1];
+            toYourGuess.innerHTML = data.common.YourGuess[lang];
+            toMyGuess.innerHTML = data.common.MyGuess[lang];
+            linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+            chengeLanguage();
+        }
+    }
+
+    function chengeLanguage() {
+        switch (obj.step) {
+            case 0:
+                info.innerHTML = data.yourGuess.main.step0[lang];
+                btn.innerHTML = data.common.ok[lang];
+                linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+                break;
+            case 1:
+                info.innerHTML = data.yourGuess.main.step1[lang];
+                btn.innerHTML = data.common.ok[lang];
+                linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+                break;
+            case 2:
+                info.innerHTML = data.yourGuess.main.step2[lang] + randomNumber;
+                btn.innerHTML = data.common.ok[lang];
+                linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+                break;
+            case 3:
+                info.innerHTML = data.yourGuess.main.step3[lang];
+                btn.innerHTML = data.common.ok[lang];
+                linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+                break;
+            case 4: 
+                info.innerHTML = data.yourGuess.main.step4[lang] + secretNumber + "</span>!";
+                btn.innerHTML = data.common.playAgain[lang];
+                linkToBook.innerHTML = data.common.footer.linkToBook[lang];
+                break;
+            default:
+
+                break;
+        }
+    }
+
+    function getRandomNumber(){
         var temp = Math.floor(Math.random()*(6-1)) + 1;
         return temp;
     }
 
     function startPlay(){
-        randomNumber = randNumFun();
+        randomNumber = getRandomNumber();
 
         obj = {
             randomNumber: randomNumber,
@@ -27,17 +88,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         secretNumber = randomNumber * 2;
         obj.step = stepStart;
-        info.innerHTML = "guess a <span>secret</span> number from 1 to 5"
+        btn.innerHTML = data.common.ok[lang];
+        info.innerHTML = data.yourGuess.main.step0[lang],
         btn.removeEventListener('click', startPlay, false);
         btn.addEventListener('click', play, false);
-        console.log("rendNum: " + randomNumber);
     }
 
 
     function play() {
-        console.log("play() => obj.step: " + obj.step);
-        console.log("play() => obj.randomNumber: " + obj.randomNumber);
-        console.log("===============================================");
         stepOne(obj, function(r){
             stepTwo(obj, function(r){
                 stepThree(obj, function(r){
@@ -51,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function stepOne(obj, calback){
         if(obj.step === 0){
             obj.step += 1;
-            info.innerHTML = "add the same <span>secret</span> number"
+            info.innerHTML = data.yourGuess.main.step1[lang];
         }else{
             calback()
         }
@@ -59,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function stepTwo(obj, calback){
         if(obj.step === 1){
             obj.step += 1;
-            info.innerHTML = "multiply by " + randomNumber;
+            info.innerHTML = data.yourGuess.main.step2[lang] + randomNumber;
         }else{
             calback()
         }
@@ -67,19 +125,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     function stepThree(obj, calback){
         if(obj.step === 2){
             obj.step += 1;
-            info.innerHTML = "divide by Your <span>secret</span> number";
+            info.innerHTML = data.yourGuess.main.step3[lang];
         }else{
             calback()
         }
     }
     function stepFour(obj) {
         document.querySelector('#info span').style.color = "red";
-        info.innerHTML = "your <span id='result'>result</span> number is <span class='result'>" + secretNumber + "</span>!";
+        info.innerHTML = data.yourGuess.main.step4[lang] + secretNumber + "</span>!";
         endGame()
     }
     function endGame(){
         btn.removeEventListener('click', play, false);
-        btn.innerHTML = "Play again?"
+        btn.innerHTML = data.common.playAgain[lang];
         btn.addEventListener('click', startPlay, false);
     }
 });

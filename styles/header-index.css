@@ -55,12 +55,10 @@
     color: #fff;
     text-decoration: underline;
 }
-.header .header__description #ua {
-    margin-left: 10px;
-}
-.header .header__description a img {
+.header img {
+    float: right;
     height: 25px;
     width: 30px;
     cursor: pointer;
-    margin: 12px 6px;
+    margin: 13px 0 0 26px;
 }

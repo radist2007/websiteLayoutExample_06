@@ -8,6 +8,7 @@
 }
 .header .header__nav ul li  {
     list-style: none;
+    margin-left: 20px;
 }
 .header .header__nav ul li:hover  {
     text-decoration: none;
@@ -18,8 +19,8 @@
     text-decoration: none;
     color: #fff;
 }
-.header .header__nav #ua {
-    /* margin-left: 10px; */
+.header .header__nav ul li a:hover {
+    text-decoration: underline;
 }
 .header .header__nav a img {
     height: 25px;

@@ -3,6 +3,16 @@
     .main {
         /* padding-top: 5%; */
     }
+    .main__wrap a {
+        font-size: 14px;
+        line-height: 40px;
+        transition: all .5s;
+    }
+    .main__wrap a:hover {
+        padding-top: -10px;
+        font-size: 20px;
+        line-height: 30px;
+    }
 }
 @media screen and (max-width: 530px){
     .header .header__description {

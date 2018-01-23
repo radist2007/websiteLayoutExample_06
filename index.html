@@ -21,34 +21,30 @@
                         <h1>JavaScript <span><i>Games</i></span></h1>
                     </a>
                 </div>
+                <img id="imgLang" src="icons/unitedKingdom.ico" alt="uk-flag">
                 <div class="header__description">
                     <a href="https://retrosnob.files.wordpress.com/2014/10/foundation-game-design-with-html5-and-javascript-v413hav-1.pdf">
-                        <p>This games done with the help of this book <span><i class="fa fa-book" aria-hidden="true"></i></span></p>
+                        <p id="navInfo">Ці ігри написані за допомоги цієї книги <span><i class='fa fa-book' aria-hidden='true'></i></span></p>
                     </a>
                     <i id="this" class="fa fa-hand-o-right" aria-hidden="true"></i>
                     <i id="ok" class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                    <a id="ua" href="index_ua.html">
-                        <img src="icons/ukraine.png" alt="ukraine-flag">
-                    </a>
-                    <a id="uk" href="index.html">
-                        <img src="icons/unitedKingdom.ico" alt="uk-flag">
-                    </a>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
+        <a href="#">iasdfadsfasdf</a>
         <div class="container">
             <div class="main__wrap">
-                <h2>Select the game!</h2>
+                <h2 id="mainInfo">Виберіть гру!</h2>
                 <a href="YourGuess.html">
                     <div class="main__block">
-                        <h3>you make a guess</h3>
+                        <h3 id="toYourGuess">ти загадуєш</h3>
                     </div>
                 </a>
                 <a href="MyGuess.html">
                     <div class="main__block">
-                        <h3>i am make a guess</h3>
+                        <h3 id="toMyGuess">я загадую</h3>
                     </div>
                 </a>
             </div>
@@ -56,13 +52,11 @@
     </main>
     <footer class="footer">
         <div class="container">
-            <a href="https://retrosnob.files.wordpress.com/2014/10/foundation-game-design-with-html5-and-javascript-v413hav-1.pdf">foundation game design with html5 and javascript</a>
+            <a id="linkToBook" href="https://retrosnob.files.wordpress.com/2014/10/foundation-game-design-with-html5-and-javascript-v413hav-1.pdf">фундаментальний ігровий дизайн, HTML5 та javascript</a>
         </div>
     </footer>
 
-    <!-- scripts -->
-    <!-- <script src="lib/jquery-3.2.1.min.js"></script> -->
-    <!-- <script src="js/main.js"></script> -->
-    <!-- end scripts -->
+    <script src="data.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

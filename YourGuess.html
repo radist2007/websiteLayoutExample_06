@@ -17,25 +17,16 @@
      <header class="header">
          <div class="container">
              <div class="header__wrap row">
-                <div class="header__logo col-lg-3 col-md-5 col-sm-5">
+                <div class="header__logo">
                     <a href="index.html">
                         <h1>JavaScript <span><i>Games</i></span></h1>
                     </a>
                 </div>
-                <nav class="header__nav col-lg-4 col-md-6 col-sm-6">
+                <img id="imgLang" src="icons/unitedKingdom.ico" alt="uk-flag">
+                <nav class="header__nav">
                     <ul>
-                        <li><a href="MyGuess.html">my guess</a></li>
-                        <li><a href="YourGuess.html">your guess</a></li>
-                        <li>
-                            <a id="ua" href="YourGuess_ua.html">
-                                <img src="icons/ukraine.png" alt="ukraine-flag">
-                            </a>
-                        </li>
-                        <li>
-                            <a id="uk" href="YourGuess.html">
-                                <img src="icons/unitedKingdom.ico" alt="uk-flag">
-                            </a>
-                        </li>
+                        <li><a id="toMyGuess" href="MyGuess.html">я загадую</a></li>
+                        <li><a id="toYourGuess" href="YourGuess.html">ти загадуєш</a></li>
                     </ul>
                 </nav>
              </div>
@@ -44,23 +35,19 @@
      <main class="main">
          <div class="container">
             <section class="yourGuess">
-                <p id="info" class="enigma">guess a <span>secret</span> number from 1 to 5</p>
-                <!-- <input id="input" type="number" placeholder="Enter your guess.."  min="1" max="5" autofocus> -->
-                <!-- <p id="output">game state</p> -->
+                <p id="info" class="enigma">загадай <span>своє</span> число від 1 to 5</p>
                 <br>
-                <button id="btn">ok</button>
+                <button id="btn">готово</button>
             </section>
          </div>
      </main>
      <footer class="footer">
          <div class="container">
-             <a href="https://retrosnob.files.wordpress.com/2014/10/foundation-game-design-with-html5-and-javascript-v413hav-1.pdf">foundation game design with html5 and javascript</a>
+             <a id="linkToBook" href="https://retrosnob.files.wordpress.com/2014/10/foundation-game-design-with-html5-and-javascript-v413hav-1.pdf">ФУНДАМЕНТАЛЬНИЙ ІГРОВИЙ ДИЗАЙН, HTML5 ТА JAVASCRIPT</a>
          </div>
      </footer>
 
-    <!-- scripts -->
-    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="data.js"></script>
     <script src="js/yourGuess.js"></script>
-    <!-- end scripts -->
 </body>
 </html>
