@@ -1,0 +1,16 @@
+extends ../layout/layout
+
+block var
+  - var title = 'My Guess'
+  - var pageName = 'myGuess'
+
+block content
+  .container
+    .myGuess
+
+      +info('myGuess__info', 'Загадай число від 0 до 5!')
+      //- +input('myGuess__input')
+      +btn('btn', 'myGuess__btn','Загадав!')
+
+block scripts
+  script(src="js/myGuess.js")

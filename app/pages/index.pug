@@ -1,0 +1,12 @@
+extends ../layout/layout
+
+block var
+  - var title = 'JSgames'
+  - var pageName = 'index'
+
+block content
+  .index
+    +info('index__info', 'Обери гру!')
+    .index__jsGames
+      +jsGame('index__jsGame','yourGuess.html','Я загадую...')
+      +jsGame('index__jsGame','myGuess.html','Ти загадуэш...')

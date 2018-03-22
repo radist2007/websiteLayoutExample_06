@@ -1,0 +1,66 @@
+@import mixins
+@import fonts
+
+a
+  text-decoration: none
+  color: #fff
+
+a:link
+
+a:visited
+
+a:focus
+
+a:hover
+  text-decoration: underline
+
+a:active 
+
+
+
+html 
+  height: 100%
+
+body
+  height: 100%
+
+.page-wrapper
+  height: 100%
+  width: 100%
+  display: flex
+  flex-direction: column
+  // align-items: stretch
+
+.header
+  flex-grow: 0
+  height: 50px
+.page-content
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 100%
+  flex-grow: 1
+  // background-color: #ccc
+.footer
+  flex-grow: 0
+
+
+.container
+  height: 100%
+  width: 90%
+  margin-right: auto
+  margin-left: auto
+  padding-left: 15px
+  padding-right: 15px
+@media (min-width: 768px) 
+  .container 
+    width: 750px
+@media (min-width: 992px) 
+  .container 
+    width: 970px
+@media (min-width: 1200px)
+  .container 
+    width: 1170px
+
+
+

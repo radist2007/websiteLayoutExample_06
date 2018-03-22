@@ -1,0 +1,33 @@
+mixin language(outer_class)
+  -var language__outer = outer_class
+  include ../blocks/language/language
+
+mixin logo(outer_class)
+  -var logo__outer = outer_class
+  include ../blocks/logo/logo
+
+mixin linkToBook(outer_class)
+  -var linkToBook_outer = outer_class
+  include ../blocks/linkToBook/linkToBook
+
+mixin info(outer_class, info__text)
+  -var info__text = info__text
+  -var info_outer = outer_class
+  include ../blocks/info/info
+
+mixin jsGame(outer_class,jsGameUrl,jsGameName)
+  -var outer__class = outer_class
+  -var outer__jsGameUrl = jsGameUrl
+  -var outer__jsGameName = jsGameName
+  include ../blocks/buttons/jsGame
+
+mixin btn(btn__id, outer_class, btn__value)
+  -var btn__id = btn__id
+  -var outer_class = outer_class
+  -var btn__value = btn__value
+  include ../blocks/buttons/btn
+
+mixin input(outer_class)
+  -var outer_class = outer_class
+
+  include ../blocks/input/input

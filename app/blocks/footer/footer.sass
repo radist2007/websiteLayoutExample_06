@@ -1,0 +1,26 @@
+@import ../../layout/mixins
+
+.footer 
+  position: relative
+  height: 50px
+  text-align: center
+  background-color: gray
+  color: #fff
+
+.footer__wrapper
+  position: relative
+  height: 100%
+  width: 100%
+
+.footer__linkToBook
+  +position-absolute()
+  font-family: Roboto, sans-serif
+  text-transform: uppercase
+  color: #fff
+
++respond-to-phone-landscape()
+  .footer a 
+    // font-size: 13px
++respond-to-phone-portrait()
+  .footer a 
+    // font-size: 10px

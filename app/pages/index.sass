@@ -1,0 +1,36 @@
+@import ../layout/mixins
+
+.index
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 100%
+
+.index__info
+  height: 50%
+  width: 100%
+
+.index__jsGames
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 50%
+  width: 100%
+
+.index__jsGame
+  margin-bottom: 20px
+  width: 80%
+
++respond-to-phone-landscape()
+  .index
+    flex-direction: row
+
+  .index__info
+    height: 100%
+
+  .index__jsGames
+    height: 100%
+    justify-content: center
+
+  .index__jsGame
+    margin: 10px

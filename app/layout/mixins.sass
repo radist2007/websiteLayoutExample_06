@@ -1,0 +1,51 @@
+=position-absolute() 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+=position-relative() 
+  position: relative
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+=transition($time)
+  transition: all $time
+
+=respond-to($media) 
+  @media only screen and (max-width: $media)
+    @content
+
+  // Phone
+=respond-to-phone() 
+  @media only screen and (max-width: 480px)
+    @content
+=rtp() 
+  @media only screen and (max-width: 480px)
+    @content
+=respond-to-phone-portrait() 
+  @media only screen and (max-width: 480px) and (orientation: portrait)
+    @content
+=rtpp() 
+  @media only screen and (max-width: 480px) and (orientation: portrait)
+    @content
+=respond-to-phone-landscape() 
+  @media only screen and (max-width: 680px) and  (orientation: landscape)
+    @content
+=rtpl() 
+  @media only screen and (max-width: 680px) and  (orientation: landscape)
+    @content
+
+  // Tablet
+=respond-to-tablet-portrait() 
+  @media only screen and (max-width: 767px) and (orientation: portrait)
+    @content
+
+=respond-to-tablet-landscape() 
+  @media only screen and (min-width: 768px) and (max-width: 979px)
+    @content
+
+=test3()
+  @media only screen and (max-width: 680px) and  (orientation: landscape)
+    @content

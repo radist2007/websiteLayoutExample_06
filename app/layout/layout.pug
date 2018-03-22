@@ -1,0 +1,20 @@
+block variables
+
+doctype html
+html(lang="en")
+
+  include ./head/head 
+
+    block link
+
+  body
+    .page-wrapper
+
+      include ../blocks/header/header
+
+      .page-content
+        block content
+
+      include ../blocks/footer/footer
+
+    block scripts

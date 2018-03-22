@@ -1,0 +1,30 @@
+@import ../../layout/mixins
+.language 
+  height: 100%
+  img
+    height: 35px
+
+.language__wrapper
+  position: relative
+  height: 100%
+  // background-color: green
+
+.language__show
+  +position-relative()
+
+.language__select
+  // +position-relative()
+  position: absolute
+  // position: relative
+  top: 100%
+  left: -64%
+  display: flex
+  flex-direction: column
+  // justify-content: flex-start
+  align-items: center
+  width: 80px
+  height: 90px
+  // border-radius: 4px
+  background-color: orange
+  z-index: 10
+  display: none

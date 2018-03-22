@@ -1,0 +1,32 @@
+@import ../../layout/mixins
+
+.jsGame
+  position: relative
+  box-sizing: border-box
+  height: 60px
+  height: 30%
+  width: 100%
+  border: 2px solid grey
+  border-radius: 6px
+  margin: 0 auto
+
+.jsGame a
+  +position-absolute
+  width: 100%
+  text-align: center
+  // text-decoration: none
+  // color: bule
+  +transition(.5s)
+
+.jsGame h2
+  width: 100%
+  font-family: Roboto, sans-serif
+  color: #357cd4
+  margin: 0
+  padding: 20px 0
+
+.jsGame
+  &:hover 
+    &jsGame h2
+    font-size: 20px
+    // text-decoration: none

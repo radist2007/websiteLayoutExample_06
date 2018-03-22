@@ -1,0 +1,36 @@
+@import ../../layout/mixins
+.header 
+  height: 50px
+  background-color: orange
+
+.header__wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: stretch
+  height: 100%
+  width: 100%
+  // background-color: #ccc
+
+.header__left
+  position: relative
+  height: 100%
+  // background-color: blue
+
+.header__right
+  position: relative
+  display: flex
+  flex-direction: row
+  height: 100%
+  // background-color: blue
+
+.header__linkToBook
+  margin: 0 20px
+
++respond-to-phone-landscape()
+  .header__linkToBook
+    display: none
++respond-to-phone-portrait()
+  .header__linkToBook
+    display: none
+
